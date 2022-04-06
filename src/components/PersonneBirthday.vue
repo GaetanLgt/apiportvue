@@ -1,0 +1,32 @@
+<template>
+  <div class="personneBD">
+      {{ personne.birthdate }}
+  </div>
+</template>
+
+<script>
+// @ is an alias to /src
+import axios from 'axios'
+
+export default {
+  name: 'PersonneBirthday',
+  components: {
+    
+  },
+  props:{
+
+      index : Number,
+
+  },
+  data() {
+    return {
+      personne : [],
+    }
+  },
+  created() {
+      axios
+        .get('http://127.0.0.1:8000/api/personnes/'+this.index)
+        .then( response => (this.personne = response.data))
+  }
+}
+</script>

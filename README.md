@@ -12,7 +12,7 @@ Vue.js Demo Application
 Requirements
 ------------
   
-  * 
+  * node.js v16.14.2
   * Apache/2.4.41 (Ubuntu)
   * Version du client de base de données : libmysql - mysqlnd 7.4.3
   * Extension PHP : mysqli curl mbstring
